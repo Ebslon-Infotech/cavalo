@@ -105,7 +105,7 @@ export default function ProductGallery() {
       {/* first half */}
       <div className="grid p-5 basis-3/4 grid-cols-2 h-max gap-10">
         {/* Gallery */}
-        <div className="h-[20rem] w-[38.79rem] flex flex-row-reverse gap-5">
+        <div className="h-[20rem] w-[40rem] flex flex-row-reverse gap-5">
           <div className="overflow-hidden relative rounded-lg">
             <Swiper modules={[Navigation, Pagination]} navigation={true} pagination={{ clickable: true }} className="mySwiper gallery">
               {
@@ -140,7 +140,7 @@ export default function ProductGallery() {
           </div>
         </div>
         {/* Details */}
-        <div className="flex flex-col justify-around h-max w-[90%] ml-[4rem]">
+        <div className="flex flex-col justify-around w-[90%] ml-[4rem]">
           <button className="flex items-center gap-1 text-sm text-gray-500">
             <CiLocationOn color="blue" size={15} />
             <span className="font-semibold">Location</span>
