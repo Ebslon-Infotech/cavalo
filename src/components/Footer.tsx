@@ -1,0 +1,168 @@
+import Image from "next/image";
+import logo from "@/assets/Logo/cavalo.webp"
+import { FaFacebook, FaInstagram, FaXTwitter } from "react-icons/fa6";
+export default function Footer() {
+  return (
+    <footer className="bg-[#1C1C1C] bg-[url('@/assets/img/footerBanner.webp')] bg-contain text-white py-5">
+      <div className="w-[80%] mx-auto">
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+          {/* Company Info */}
+          <div className="lg:col-span-2">
+            <Image
+              src={logo}
+              alt="Cavalo Logo"
+              width={120}
+              className=" text-white"
+            />
+            <p className="leading-7 mt-4 w-3/4 text-sm font-medium">
+              Welcome to Cavalo, your go-to platform for buying and selling refurbished trucks. Find or sell trucks
+              easily with our user-friendly site. Whether you're experienced or new, Cavalo makes the process simple.
+              Start today!
+            </p>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-[#FFB800] font-semibold mb-4">Quick Links</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a href="#" className="hover:text-[#FFB800]">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#FFB800]">
+                  Finance
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#FFB800]">
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#FFB800]">
+                  Faqs
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#FFB800]">
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#FFB800]">
+                  Term & Conditions
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Category */}
+          <div>
+            <h3 className="text-[#FFB800] font-semibold mb-4">Category</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a href="#" className="hover:text-[#FFB800]">
+                  Trucks
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#FFB800]">
+                  Buses
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#FFB800]">
+                  3 Wheelers
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#FFB800]">
+                  Tractors
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#FFB800]">
+                  Machinery
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* other links */}
+          <div>
+            <h3 className="text-[#FFB800] font-semibold mb-4">Other Links</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a href="#" className="hover:text-[#FFB800]">
+                  Become a Partner
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#FFB800]">
+                  RC Transfer Status
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#FFB800]">
+                  Customer Care
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#FFB800]">
+                  Vehicle Requirement
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:text-[#FFB800]">
+                  EMI Calculator
+                </a>
+              </li>
+            </ul>
+          </div>
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-[#FFB800] font-semibold mb-4">Contact Us</h3>
+            <ul className="space-y-2 text-sm">
+              <li className="flex items-center gap-2">
+                <span>📞</span>
+                <a href="tel:+917021411346" className="hover:text-[#FFB800]">
+                  +91 7021411346
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <span>✉️</span>
+                <a href="mailto:info@cavalo.in" className="hover:text-[#FFB800]">
+                  info@cavalo.in
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <span>📍</span>
+                <span>Location</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        {/* Footer Bottom */}
+        <div className="mt-12 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-sm text-gray-400">Copyright © 2024, CAVALO, Design & Developed by Epsilon Infotech</p>
+          <div className="flex gap-4">
+            <span className="text-[#FFB800]">Follow Us</span>
+            <a href="#" className="hover:text-[#FFB800]">
+              <FaFacebook size={20} />
+            </a>
+            <a href="#" className="hover:text-[#FFB800]">
+              <FaInstagram size={20} />
+            </a>
+            <a href="#" className="hover:text-[#FFB800]">
+              <FaXTwitter size={20} />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  )
+}
+
