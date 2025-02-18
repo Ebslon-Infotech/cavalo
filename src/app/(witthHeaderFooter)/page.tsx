@@ -5,7 +5,6 @@ import { FaArrowRight } from 'react-icons/fa6'
 import Logo1 from '@/assets/logo/logo1.webp'
 import Logo2 from '@/assets/logo/logo2.webp'
 import Logo3 from '@/assets/logo/logo3.webp'
-import mail from '@/assets/img/mail.webp'
 import Logo4 from '@/assets/logo/logo4.webp'
 import Logo5 from '@/assets/logo/logo5.webp'
 import Logo6 from '@/assets/logo/logo6.webp'
@@ -194,27 +193,7 @@ export default function page() {
       <BlogSection />
       {/* Faq */}
       <FAQ />
-      {/* Newsletter Section */}
-      <div className="mt-12 bg-[#404041] text-white p-4">
-        <div className="flex items-center gap-5 justify-center mx-auto text-center">
-          <Image src={mail} alt='no image' width={40} />
-          <div className='flex justify-normal flex-col items-start'>
-            <h3 className="text-2xl font-bold ">JOIN OUR NEWSLETTER</h3>
-            <p className='text-left'>Get Exclusive offer and News</p>
-          </div>
-          <form className="flex gap-5">
-            <input
-              type="email"
-              placeholder="Your email address"
-              className="flex-1 px-4 py-3 w-[20vw] rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-200"
-              required
-            />
-            <button type="submit" className="px-6 py-2 border border-white text-white rounded hover:bg-gray-800 transition-colors">
-              Subscribe →
-            </button>
-          </form>
-        </div>
-      </div>
+
     </>
   )
 }
