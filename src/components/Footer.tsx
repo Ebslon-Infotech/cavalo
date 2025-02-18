@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <>
       {/* Newsletter Section */}
-      <div className="mt-12 bg-[#404041] text-white p-4">
+      <div className=" bg-[#404041] text-white p-4">
         <div className="flex items-center gap-5 justify-center mx-auto text-center">
           <Image src={mail} alt='no image' width={40} />
           <div className='flex justify-normal flex-col items-start'>
