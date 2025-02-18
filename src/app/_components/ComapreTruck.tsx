@@ -33,18 +33,18 @@ export default function VehicleComparison() {
       <div className="flex justify-center relative">
         <div className="absolute top-16 px-2 font-medium h-10 w-10 rounded-[50%] text-2xl bg-primarycolor text-white">vs</div>
         <div>
-          <div className="flex justify-between">
+          <div className="flex">
             <Image
               src={truck}
               width={240}
               alt=""
-              className="border-r-4 border-dashed"
+              className=""
             />
             <Image
               src={truck}
               width={240}
               alt=""
-              className="mx-auto"
+              className=""
             />
           </div>
           <div className="flex">
