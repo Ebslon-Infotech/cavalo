@@ -1,5 +1,6 @@
 "use client"
 import Logo from '@/assets/Logo/Logo.webp'
+import Link from 'next/link'
 import Image from 'next/image'
 import { CiLocationOn } from 'react-icons/ci'
 import { MdOutlineLocalPhone } from 'react-icons/md'
@@ -18,7 +19,7 @@ export default function Header2() {
   return (
     <>
     <nav className='flex capitalize justify-around items-center py-4 bg-zinc-100 px-20'>
-      <div><Image height={100} width={100} src={Logo} alt="No image" /></div>
+      <Link href="/"><Image height={100} width={100} src={Logo} alt="No image" /></Link>
       <ul className='flex space-x-2'>
         <li className='rounded-3xl px-4 py-1 hover:bg-slate-300 cursor-pointer bg-opacity-25 transition-all duration-500 ease-in-out flex justify-center items-center gap-2'><Image height={20} src={truck} alt='no image' /> truck</li>
         <li className='rounded-3xl px-4 py-1 hover:bg-slate-300 cursor-pointer bg-opacity-25 transition-all duration-75 delay-75 flex justify-center items-center gap-2'><Image height={20} src={buses} alt='no image' /> buses</li>
