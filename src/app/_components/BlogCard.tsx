@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Blog {
   id: string;
@@ -33,10 +34,10 @@ export default function BlogCard({ blog }: { blog: Blog }) {
         <h3 className=" font-semibold px-2 text-2xl">{blog.title}</h3>
       </div>
       <p className="text-gray-600  mb-4 text-base font-light">{blog.excerpt}</p>
-      <a href="#" className="text-primarycolor pb-3 hover:text-primarycolor transition-colors flex items-center gap-1 text-lg font-semibold">
+      <Link href="/blog-detail" className="text-primarycolor pb-3 hover:text-primarycolor transition-colors flex items-center gap-1 text-lg font-semibold">
         Read more
         <span className="text-lg">→</span>
-      </a>
+      </Link>
     </div>
   </article>;
 }

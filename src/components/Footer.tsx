@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import logo from "@/assets/Logo/cavalo.webp"
 import mail from '@/assets/img/mail.webp'
 
@@ -51,9 +52,9 @@ export default function Footer() {
               <h3 className="text-[#FFB800] font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="#" className="hover:text-[#FFB800]">
+                  <Link href="/about-us" className="hover:text-[#FFB800]">
                     About Us
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="#" className="hover:text-[#FFB800]">
@@ -61,9 +62,9 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-[#FFB800]">
+                  <Link href="/blog" className="hover:text-[#FFB800]">
                     Blog
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="#" className="hover:text-[#FFB800]">
@@ -76,9 +77,9 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-[#FFB800]">
+                  <Link href="/terms-and-conditions" className="hover:text-[#FFB800]">
                     Term & Conditions
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
