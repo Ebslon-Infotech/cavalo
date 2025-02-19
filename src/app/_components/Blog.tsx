@@ -50,7 +50,7 @@ export default function BlogSection() {
           <h2 className="text-4xl font-bold flex-1 w-full text-center">
             Latest <span className="text-[#F4B223]">Blog</span>
           </h2>
-          <a href="#" className="text-gray-600 font-medium flex items-center gap-2">
+          <a href="/blog" className="text-gray-600 font-medium flex items-center gap-2">
             See All
             <span className="text-xl">→</span>
           </a>
