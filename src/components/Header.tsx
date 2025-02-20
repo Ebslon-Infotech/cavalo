@@ -33,7 +33,7 @@ export default function Header2() {
         <li className='rounded-3xl px-4 py-1  border-2 flex justify-center items-center gap-2'><MdOutlineLocalPhone /> 24/7 support</li>
       </ul>
     </nav>
-     <nav className='flex capitalize justify-between items-center py-3 pl-[9rem] pr-[8.8rem]'>
+     <nav className='flex capitalize justify-between items-center py-3 pl-[9rem] pr-[8.8rem] shadow-slate-200 shadow-xl'>
             <ul className="flex justify-center text-center items-center gap-12">
               <li className='flex justify-normal items-center gap-2'>new Truck <IoIosArrowDown /></li>
               <li className='flex justify-normal items-center gap-2'>used Truck <IoIosArrowDown /></li>
