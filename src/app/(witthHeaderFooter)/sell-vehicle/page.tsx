@@ -1,8 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
-import representation from "@/assets/img/representation.webp";
 
 import SellVehicle from "@/app/_components/sellVehicle";
 import Thankyou from "@/components/Thankyou";

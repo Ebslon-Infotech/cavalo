@@ -46,11 +46,9 @@ export function DatePicker({ value, onChange, format = "DD/MM/YYYY", placeholder
     const firstDay = new Date(year, month, 1).getDay()
 
     const days = []
-    // Add empty cells for days before the first day of the month
     for (let i = 0; i < firstDay; i++) {
       days.push(null)
     }
-    // Add days of the month
     for (let i = 1; i <= daysInMonth; i++) {
       days.push(i)
     }
