@@ -28,25 +28,25 @@ export default function page() {
     phone: "",
     state: "",
     district: "",
-    model:"",
-    brand:"",
-    length:"",
+    model: "",
+    brand: "",
+    length: "",
     bodyType: "",
-    seatingCapacity:"",
-    yearOfManufacture:"",
-    additionalRequirements:"",
-    budget:"",
-    financingOption:"",
+    seatingCapacity: "",
+    yearOfManufacture: "",
+    additionalRequirements: "",
+    budget: "",
+    financingOption: "",
     duration: ""
   });
 
   const vehicles = [
-     { id: "truck", label: "Truck", icon: truck },
-     { id: "buses", label: "Buses", icon: buses },
-     { id: "threewheelers", label: "3 Wheelers", icon: threeWheelers },
-     { id: "tractors", label: "Tractors", icon: tractors },
-     { id: "machinery", label: "Machinery", icon: machinery },
-   ]
+    { id: "truck", label: "Truck", icon: truck },
+    { id: "buses", label: "Buses", icon: buses },
+    { id: "threewheelers", label: "3 Wheelers", icon: threeWheelers },
+    { id: "tractors", label: "Tractors", icon: tractors },
+    { id: "machinery", label: "Machinery", icon: machinery },
+  ]
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
@@ -64,7 +64,7 @@ export default function page() {
 
   return (
     <>
-      <div className="rounded-lg my-10 p-6 shadow-[0_0_0_1px_rgba(0,0,0,0.1)] mx-[20rem]">
+      <div className="rounded-lg my-10 p-6 shadow-[0_0_0_1px_rgba(0,0,0,0.1)] mx-[15rem]">
         <div className="flex flex-col items-start gap-2">
           <h1 className="font-semibold text-[2.7rem]">
             Wheels and Wonders:
@@ -88,11 +88,10 @@ export default function page() {
               <div className="flex flex-col items-center justify-center gap-2">
                 <button
                   onClick={() => setCurrentPage(1)}
-                  className={`px-3 py-3 rounded-full text-sm font-semibold transition-all duration-300 ${
-                    currentPage === 1
+                  className={`px-3 py-3 rounded-full text-sm font-semibold transition-all duration-300 ${currentPage === 1
                       ? "bg-black/80 text-primarycolor shadow-lg"
                       : "bg-gray-200 text-gray-600 hover:bg-gray-300 hover:text-gray-700"
-                  }`}
+                    }`}
                 >
                   <LiaUserSolid size={30} />
                 </button>
@@ -103,11 +102,10 @@ export default function page() {
               <div className="flex flex-col items-center justify-center gap-2">
                 <button
                   onClick={() => setCurrentPage(2)}
-                  className={`px-3 py-3 rounded-full text-sm font-semibold transition-all duration-300 ${
-                    currentPage === 2
+                  className={`px-3 py-3 rounded-full text-sm font-semibold transition-all duration-300 ${currentPage === 2
                       ? "bg-black/80 text-primarycolor shadow-lg"
                       : "bg-gray-200 text-gray-600 hover:bg-gray-300 hover:text-gray-700"
-                  }`}
+                    }`}
                 >
                   <TbTruckDelivery size={30} />
                 </button>
@@ -118,11 +116,10 @@ export default function page() {
               <div className="flex flex-col items-center justify-center gap-2">
                 <button
                   onClick={() => setCurrentPage(3)}
-                  className={`px-3 py-3 rounded-full text-sm font-semibold transition-all duration-300 ${
-                    currentPage === 3
+                  className={`px-3 py-3 rounded-full text-sm font-semibold transition-all duration-300 ${currentPage === 3
                       ? "bg-black/80 text-primarycolor shadow-lg"
                       : "bg-gray-200 text-gray-600 hover:bg-gray-300 hover:text-gray-700"
-                  }`}
+                    }`}
                 >
                   <BsCashCoin size={30} />
                 </button>
@@ -271,11 +268,10 @@ export default function page() {
                         key={vehicle.id}
                         onClick={() => setSelectedVehicle(vehicle.id)}
                         className={`flex items-center gap-2 px-4 py-2 rounded-full text-lg transition-colors
-                            ${
-                              selectedVehicle === vehicle.id
-                                ? "border-4 border-yellow-500 text-black"
-                                : "border-2 border-white/20 hover:border-yellow-500"
-                            }`}
+                            ${selectedVehicle === vehicle.id
+                            ? "border-4 border-yellow-500 text-black"
+                            : "border-2 border-white/20 hover:border-yellow-500"
+                          }`}
                       >
                         <Image src={vehicle.icon} alt="icon" height={20} />
                         {vehicle.label}
@@ -294,30 +290,30 @@ export default function page() {
                         value={formData.brand}
                         onChange={handleChange}
                         className="w-full p-4 rounded-lg bg-white text-black text-[1rem]"
-                        />
+                      />
                     </div>
 
                     <div>
                       <label className="block text-[1.12rem] font-medium mb-2">Model</label>
-                      <input 
-                      type="text"
-                      id="model"
-                      name="model"
-                      value={formData.model}
-                      onChange={handleChange}
-                      className="w-full p-4 rounded-lg bg-white text-black text-[1rem]"
+                      <input
+                        type="text"
+                        id="model"
+                        name="model"
+                        value={formData.model}
+                        onChange={handleChange}
+                        className="w-full p-4 rounded-lg bg-white text-black text-[1rem]"
                       />
                     </div>
 
                     <div>
                       <label className="block text-[1.12rem] font-medium mb-2">Length</label>
                       <input
-                      type="number"
-                      id="length"
-                      name="length"
-                      value={formData.length}
-                      onChange={handleChange}
-                      className="w-full p-4 rounded-lg bg-white text-black text-[1rem]"
+                        type="number"
+                        id="length"
+                        name="length"
+                        value={formData.length}
+                        onChange={handleChange}
+                        className="w-full p-4 rounded-lg bg-white text-black text-[1rem]"
                       />
                     </div>
 
@@ -369,13 +365,13 @@ export default function page() {
                     <label className="block text-[1.12rem] font-medium mb-2">
                       Additional Requirements
                     </label>
-                    <input 
+                    <input
                       type="text"
                       value={formData.additionalRequirements}
                       onChange={handleChange}
                       placeholder="Please provide any specific details or requirementsyou may have"
                       className="w-full p-4 rounded-lg bg-white text-black text-lg appearance-none"
-                      />
+                    />
                   </div>
 
                   <div className="flex justify-between">
@@ -400,92 +396,92 @@ export default function page() {
             )}
 
             {currentPage === 3 && (
-               <div className=" p-6 text-black">
-               <form
-                 onSubmit={handleSubmit}
-                 className="max-w-4xl mx-auto space-y-8"
-               >
-                 <h1 className="text-4xl font-medium mb-6">
-                   Determine Your Budget Parameter Below
-                 </h1>
+              <div className=" p-6 text-black">
+                <form
+                  onSubmit={handleSubmit}
+                  className="max-w-4xl mx-auto space-y-8"
+                >
+                  <h1 className="text-4xl font-medium mb-6">
+                    Determine Your Budget Parameter Below
+                  </h1>
 
-                 <div className="space-y-6">
-                   <div>
-                     <label
-                       htmlFor="fullName"
-                       className="block text-[1.12rem] font-medium mb-2"
-                     >
-                       Budget
-                     </label>
-                     <input
-                       type="text"
-                       id="budget"
-                       name="budget"
-                       value={formData.budget}
-                       onChange={handleChange}
-                       className="w-full p-4 rounded-md bg-white text-black text-[1rem]"
-                       placeholder="Enter your full name"
-                     />
-                   </div>
+                  <div className="space-y-6">
+                    <div>
+                      <label
+                        htmlFor="fullName"
+                        className="block text-[1.12rem] font-medium mb-2"
+                      >
+                        Budget
+                      </label>
+                      <input
+                        type="text"
+                        id="budget"
+                        name="budget"
+                        value={formData.budget}
+                        onChange={handleChange}
+                        className="w-full p-4 rounded-md bg-white text-black text-[1rem]"
+                        placeholder="Enter your full name"
+                      />
+                    </div>
 
-                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                     <div>
-                       <label
-                         htmlFor="state"
-                         className="block text-[1.12rem] font-medium mb-2"
-                       >
-                         Financing Option
-                       </label>
-                       <input
-                         type="text"
-                         id="financingOption"
-                         name="financingOption"
-                         value={formData.financingOption}
-                         onChange={handleChange}
-                         className="w-full p-4 rounded-md bg-white text-black text-[1rem]"
-                         placeholder="Enter your state"
-                       />
-                     </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div>
+                        <label
+                          htmlFor="state"
+                          className="block text-[1.12rem] font-medium mb-2"
+                        >
+                          Financing Option
+                        </label>
+                        <input
+                          type="text"
+                          id="financingOption"
+                          name="financingOption"
+                          value={formData.financingOption}
+                          onChange={handleChange}
+                          className="w-full p-4 rounded-md bg-white text-black text-[1rem]"
+                          placeholder="Enter your state"
+                        />
+                      </div>
 
-                     <div>
-                       <label
-                         htmlFor="district"
-                         className="block text-[1.12rem] font-medium mb-2"
-                       >
-                         Time Duration of Purchase
-                       </label>
-                       <input
-                         type="text"
-                         id="duration"
-                         name="duration"
-                         value={formData.duration}
-                         onChange={handleChange}
-                         className="w-full p-4 rounded-md bg-white text-black text-[1rem]"
-                         placeholder="Enter your district"
-                       />
-                     </div>
-                   </div>
-                 </div>
+                      <div>
+                        <label
+                          htmlFor="district"
+                          className="block text-[1.12rem] font-medium mb-2"
+                        >
+                          Time Duration of Purchase
+                        </label>
+                        <input
+                          type="text"
+                          id="duration"
+                          name="duration"
+                          value={formData.duration}
+                          onChange={handleChange}
+                          className="w-full p-4 rounded-md bg-white text-black text-[1rem]"
+                          placeholder="Enter your district"
+                        />
+                      </div>
+                    </div>
+                  </div>
 
-                 <div className="flex justify-between">
-                   <button
-                     type="button"
-                     className="flex items-center gap-2 px-8 py-4 rounded-lg bg-yellow-500 font-medium text-white hover:bg-gray-300 transition-colors"
-                   >
-                     <HiOutlineArrowNarrowLeft className="w-5 h-5" />
-                     Back
-                   </button>
+                  <div className="flex justify-between">
+                    <button
+                      type="button"
+                      className="flex items-center gap-2 px-8 py-4 rounded-lg bg-yellow-500 font-medium text-white hover:bg-gray-300 transition-colors"
+                    >
+                      <HiOutlineArrowNarrowLeft className="w-5 h-5" />
+                      Back
+                    </button>
 
-                   <button
-                     type="submit"
-                     className="flex items-center gap-2 px-8 py-4 rounded-lg bg-yellow-500 font-medium text-white hover:bg-yellow-400 transition-colors"
-                   >
-                     Submit
-                     <HiOutlineArrowNarrowRight className="w-5 h-5" />
-                   </button>
-                 </div>
-               </form>
-             </div>
+                    <button
+                      type="submit"
+                      className="flex items-center gap-2 px-8 py-4 rounded-lg bg-yellow-500 font-medium text-white hover:bg-yellow-400 transition-colors"
+                    >
+                      Submit
+                      <HiOutlineArrowNarrowRight className="w-5 h-5" />
+                    </button>
+                  </div>
+                </form>
+              </div>
             )}
           </div>
         </div>
