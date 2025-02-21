@@ -67,9 +67,9 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-[#FFB800]">
+                  <Link href="/faq" className="hover:text-[#FFB800]">
                     Faqs
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="#" className="hover:text-[#FFB800]">
