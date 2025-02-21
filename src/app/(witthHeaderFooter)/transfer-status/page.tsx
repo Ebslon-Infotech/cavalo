@@ -1,4 +1,7 @@
 "use client"
+
+import Link from "next/link"
+import React from "react"
 import assistance from "@/assets/img/rc/assistance.webp"
 import finance from "@/assets/img/rc/finances.webp"
 import support from "@/assets/img/rc/support.webp"
@@ -24,13 +27,13 @@ export default function Page() {
           <p className="text-gray-600">
             The policy provides you multifold benefits once you sell your truck with us. For more details on the same,
             read the{" "}
-            <a href="#" className="text-blue-600 hover:underline">
+            <Link href="/faq" className="text-blue-600 hover:underline">
               FAQs
-            </a>{" "}
+            </Link>{" "}
             or{" "}
-            <a href="#" className="text-blue-600 hover:underline">
+            <Link href="/contact-us" className="text-blue-600 hover:underline">
               Contact Us
-            </a>
+            </Link>
             !
           </p>
         </div>

@@ -121,14 +121,14 @@ export default function Footer() {
               <h3 className="text-[#FFB800] font-semibold mb-4">Other Links</h3>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="#" className="hover:text-[#FFB800]">
+                  <Link href="/become-a-partner" className="hover:text-[#FFB800]">
                     Become a Partner
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-[#FFB800]">
+                  <Link href="/transfer-status" className="hover:text-[#FFB800]">
                     RC Transfer Status
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="#" className="hover:text-[#FFB800]">
@@ -136,14 +136,14 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-[#FFB800]">
+                  <a href="/vehicle-representation" className="hover:text-[#FFB800]">
                     Vehicle Requirement
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-[#FFB800]">
+                  <Link href="/emi-calculator" className="hover:text-[#FFB800]">
                     EMI Calculator
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
