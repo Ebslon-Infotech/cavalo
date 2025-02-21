@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import img from "@/assets/img/blog/background.webp"
+import Link from 'next/link'
 export default function page() {
   return (
     <>
@@ -47,7 +48,7 @@ export default function page() {
                 </div>
               ))
             }
-            <button className="py-3 text-white w-full bg-primarycolor rounded-md">View All</button>
+            <Link href="/blog" className="py-3 text-white w-full bg-primarycolor rounded-md text-center">View All</Link>
           </div>
         </div>
       </div>
