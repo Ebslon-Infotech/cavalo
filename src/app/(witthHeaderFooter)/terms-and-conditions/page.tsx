@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import dot1 from "@/assets/img/terms-condition/Dot Pattern 2.webp";
 import dot2 from "@/assets/img/terms-condition/Dot Pattern 3.webp";
+import { FaAngleRight } from "react-icons/fa6";
 
 export default function page() {
   return (
@@ -37,18 +38,8 @@ export default function page() {
                 </li>
                 <li>
                   <div className="flex items-center">
-                    <svg
-                      className="w-6 h-6 text-black"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                        clipRule="evenodd"
-                      ></path>
-                    </svg>
+                    <FaAngleRight />
+
                     <Link
                       href={`/about-us`}
                       className="ml-1 text-lg font-medium text-black hover:text-primarycolor md:ml-2"

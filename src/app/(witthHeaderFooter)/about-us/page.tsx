@@ -25,6 +25,7 @@ import team2 from "@/assets/img/aboutus/team2.webp"
 import team3 from "@/assets/img/aboutus/team3.webp"
 import team4 from "@/assets/img/aboutus/team4.webp"
 import newsletter from "@/assets/img/aboutus/newsletter.webp"
+import { FaAngleRight } from "react-icons/fa6";
 
 export default function page() {
   const features = [
@@ -53,26 +54,26 @@ export default function page() {
   ];
 
   const teamMember = [
-     {
-          image: team1,
-          name: "Ruthvik",
-          designation: "Procurement Head"
-     },
-     {
-          image: team2,
-          name: "Nisha",
-          designation: "Finance"
-     },
-     {
-          image: team3,
-          name: "Rupali",
-          designation: "Sales Head"
-     },
-     {
-          image: team4,
-          name: "Rasika",
-          designation: "sales"
-     },
+    {
+      image: team1,
+      name: "Ruthvik",
+      designation: "Procurement Head"
+    },
+    {
+      image: team2,
+      name: "Nisha",
+      designation: "Finance"
+    },
+    {
+      image: team3,
+      name: "Rupali",
+      designation: "Sales Head"
+    },
+    {
+      image: team4,
+      name: "Rasika",
+      designation: "sales"
+    },
   ]
 
   return (
@@ -103,18 +104,7 @@ export default function page() {
                 {/* about */}
                 <li>
                   <div className="flex items-center">
-                    <svg
-                      className="w-6 h-6 text-white"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                        clipRule="evenodd"
-                      ></path>
-                    </svg>
+                    <FaAngleRight className="text-white" />
                     <Link
                       href={`/about-us`}
                       className="ml-1 text-sm font-medium text-white hover:text-primarycolor md:ml-2"
@@ -286,32 +276,32 @@ export default function page() {
       <div
         className={`flex flex-col items-center bg-cover justify-center bg-[url('@/assets/img/aboutus/teamM.webp')] h-[45rem] mt-10`}
       >
-          <div className="text-center">
-               <h1 className="text-5xl font-semibold">
-                    Team <span className="text-primarycolor">Member</span>
-               </h1>
-               <p className="text-[1.25rem] mx-[25rem]">
-               We have a team of specialists who are highly skilled and experienced experts in their respective fields, ensuring top-quality results.
-               </p>
-          </div>
+        <div className="text-center">
+          <h1 className="text-5xl font-semibold">
+            Team <span className="text-primarycolor">Member</span>
+          </h1>
+          <p className="text-[1.25rem] mx-[25rem]">
+            We have a team of specialists who are highly skilled and experienced experts in their respective fields, ensuring top-quality results.
+          </p>
+        </div>
 
-          <div className="flex gap-10 items-center pb-10 mt-10">
-               {
-                    teamMember.map((item,index) => (
-                         <div key={index} className="flex flex-col items-center bg-white shadow-xl">
-                              <Image src={item.image} alt={item.name} height={500} width={300} />
-                              <div className="text-center p-2">
-                                   <h2 className="mt-2 font-semibold text-2xl">
-                                        {item.name}
-                                   </h2>
-                                   <p>
-                                        {item.designation}
-                                   </p>
-                              </div>
-                         </div>
-                    ))
-               }
-          </div>
+        <div className="flex gap-10 items-center pb-10 mt-10">
+          {
+            teamMember.map((item, index) => (
+              <div key={index} className="flex flex-col items-center bg-white shadow-xl">
+                <Image src={item.image} alt={item.name} height={500} width={300} />
+                <div className="text-center p-2">
+                  <h2 className="mt-2 font-semibold text-2xl">
+                    {item.name}
+                  </h2>
+                  <p>
+                    {item.designation}
+                  </p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
       </div>
     </>
   );

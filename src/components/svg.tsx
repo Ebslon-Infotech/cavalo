@@ -75,3 +75,4 @@ export function Machinery({ }) {
     </defs>
   </svg>
 }
+
