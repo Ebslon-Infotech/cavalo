@@ -18,7 +18,16 @@ import { DatePicker } from "@/components/datePicker";
 
 import { MdCancel } from "react-icons/md";
 
-import Minibus from "@/assets/img/sellVechile/minibus.svg";
+import Minibus from "@/assets/img/sellVechile/New icons/midibus.webp";
+import Articulated from "@/assets/img/sellVechile/New icons/articulated.webp";
+import Bharatbenz from "@/assets/img/sellVechile/New icons/bharatbenz.webp";
+import Bus from "@/assets/img/sellVechile/New icons/bus.webp";
+import Echiter from "@/assets/img/sellVechile/New icons/echiter.webp";
+import Scania from "@/assets/img/sellVechile/New icons/scania.webp";
+import School from "@/assets/img/sellVechile/New icons/school.webp";
+import Singledeck from "@/assets/img/sellVechile/New icons/singleDeck.webp";
+
+import Midibus from "@/assets/img/sellVechile/minibus.svg";
 
 import Select from "react-select";
 
@@ -30,6 +39,7 @@ interface FilePreview {
 export default function SellVehicle({ trigger }: { trigger: any }) {
   const [currentPage, setCurrentPage] = React.useState(1);
   const [selectedVehicle, setSelectedVehicle] = useState("truck");
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const [formData, setFormData] = useState({
     fullName: "",
@@ -69,6 +79,45 @@ export default function SellVehicle({ trigger }: { trigger: any }) {
     { value: "Bihar", label: "Bihar" },
     { value: "Chhattisgarh", label: "Chhattisgarh" },
     { value: "Goa", label: "Goa" },
+  ];
+
+  const vehicleTypes = [
+    {
+      icon: Minibus,
+      title: "Midibus",
+    },
+    {
+      icon: Echiter,
+      title: "Eicher Bus",
+    },
+    {
+      icon: Scania,
+      title: "Scania Bus",
+    },
+    {
+      icon: Bus,
+      title: "Bus",
+    },
+    {
+      icon: Bharatbenz,
+      title: "Bharatbenz Bus",
+    },
+    {
+      icon: Articulated,
+      title: "Articulated Bus",
+    },
+    {
+      icon: School,
+      title: "School Bus",
+    },
+    {
+      icon: Minibus,
+      title: "Minibus",
+    },
+    {
+      icon: Singledeck,
+      title: "Single-Deck Bus",
+    },
   ];
 
   const handleChange = (e: any, field?: string) => {
@@ -565,14 +614,33 @@ export default function SellVehicle({ trigger }: { trigger: any }) {
             </div>
 
             {/* Form Fields */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Image
-                src={Minibus}
-                alt="minibus"
-                width={300}
-                height={300}
-                className="text-yellow"
-              />
+            <div className="flex flex-wrap items-center justify-center gap-8 mx-auto bg-gray-300/30 py-10 rounded-lg">
+              {vehicleTypes.map((vehicle, index) => (
+                <div
+                  key={index}
+                  onClick={() => setActiveIndex(index)}
+                  className={`bg-white px-6 py-3 rounded-lg flex flex-col items-center gap-2 w-[15%] text-gray-600/60 cursor-pointer border-2 border-gray-200 transition-colors group ${
+                    activeIndex === index
+                      ? "border-yellow-400 text-yellow-400"
+                      : "hover:border-yellow-400 hover:text-yellow-400"
+                  }`}
+                >
+                  <Image
+                    src={vehicle.icon}
+                    alt="icon"
+                    height={50}
+                    className={`invert grayscale transition duration-300 ${
+                      activeIndex === index
+                        ? "invert-0 grayscale-0"
+                        : "group-hover:invert-0 group-hover:grayscale-0"
+                    }`}
+                  />
+
+                  <h2 className="text-[0.9rem] font-semibold">
+                    {vehicle.title}
+                  </h2>
+                </div>
+              ))}
             </div>
             <div className="flex justify-between">
               <button
