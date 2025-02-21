@@ -4,60 +4,43 @@ import truck from "@/assets/img/turck img1.webp"
 import available from "@/assets/logo/available.webp"
 import ton from '@/assets/logo/ton.webp'
 import cargo from '@/assets/logo/cargo.webp'
-import { FaArrowRight, FaIndianRupeeSign } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa6";
+import leftTruck from "@/assets/img/leftTruck.webp"
+import rightTruck from "@/assets/img/rightTruck.webp"
+import Link from "next/link";
+import { CalenderSvg } from "@/components/svg";
 
-export default function VehicleComparison() {
-  const [vehicles] = useState([
-    {
-      brand: "Ashok Leyland",
-      model: "AL192042",
-      year: "2020",
-      capacity: "12 Ton",
-      type: "Cargo",
-      price: "₹16.28 - 16.38 lakh",
-      image: "https://via.placeholder.com/200x150?text=Vehicle+1",
-    },
-    {
-      brand: "Ashok Leyland",
-      model: "AL192042",
-      year: "2021",
-      capacity: "10 Ton",
-      type: "Cargo",
-      price: "₹16.28 - 16.38 lakh",
-      image: "https://via.placeholder.com/200x150?text=Vehicle+2",
-    },
-  ]);
+export default function ComapreTruck({ className }: { className?: string }) {
+
 
   return (
-    <div className="bg-white col-span-1 rounded-2xl">
-      <div className="flex justify-center relative">
-        <div className="absolute top-16 px-2 font-medium h-10 w-10 rounded-[50%] text-2xl bg-primarycolor text-white">vs</div>
-        <div>
-          <div className="flex">
+    <div className={`grid grid-cols-2 bg-white rounded-md border border-lightgray ${className ? className : ""}`}>
+      <div className="col-span-1">
+
+        <div className={`bg-white `}>
+          {/* Truck Image Carousel */}
+          <div className="relative flex justify-start items-end h-[200px] bg-[#E6E6E7]">
             <Image
-              src={truck}
-              width={240}
-              alt=""
-              className=""
+              className="h-[80%] object-contain"
+              width={200}
+              src={leftTruck}
+              alt="Truck"
             />
-            <Image
-              src={truck}
-              width={240}
-              alt=""
-              className=""
-            />
+            <div className="line absolute w-2 h-[80%] border-r border-dashed  border-[#000000] top-[50%] translate-y-[-50%] right-0"></div>
+            <div className="absolute bg-primarycolor top-[50%] translate-y-[-50%] right-[-20px] h-[40px] w-[40px] flex items-center justify-center text-white font-semibold rounded-full">VS</div>
           </div>
-          <div className="flex">
-            <div className="my-4 mx-5 w-[12vw]">
-              <h2 className="text-xl font-semibold">Ashok Leyland</h2>
-              <p className="text-gray-500">Ashok Leyland AL192042</p>
+          {/* Location Tag */}
+
+          {/* Card Content */}
+          <div className="text-sm">
+            <div className="px-[1pc] my-[1pc] border-r border-dashed border-[#000000]">
+              <h2 className="text-lg font-semibold">Ashok Leyland</h2>
+              <p className="text-gray-500 text-xs">Ashok Leyland 1920 4X2 Tipper | AL192042</p>
 
               {/* Info Icons Section */}
               <div className="flex justify-between mt-5 py-2 text-sm border-t-2 border-b-2 text-gray-600">
                 <div className="text-center flex flex-col items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 1024 1024">
-                    <path fill="currentColor" d="m960 95.888l-256.224.001V32.113c0-17.68-14.32-32-32-32s-32 14.32-32 32v63.76h-256v-63.76c0-17.68-14.32-32-32-32s-32 14.32-32 32v63.76H64c-35.344 0-64 28.656-64 64v800c0 35.343 28.656 64 64 64h896c35.344 0 64-28.657 64-64v-800c0-35.329-28.656-63.985-64-63.985m0 863.985H64v-800h255.776v32.24c0 17.679 14.32 32 32 32s32-14.321 32-32v-32.224h256v32.24c0 17.68 14.32 32 32 32s32-14.32 32-32v-32.24H960zM736 511.888h64c17.664 0 32-14.336 32-32v-64c0-17.664-14.336-32-32-32h-64c-17.664 0-32 14.336-32 32v64c0 17.664 14.336 32 32 32m0 255.984h64c17.664 0 32-14.32 32-32v-64c0-17.664-14.336-32-32-32h-64c-17.664 0-32 14.336-32 32v64c0 17.696 14.336 32 32 32m-192-128h-64c-17.664 0-32 14.336-32 32v64c0 17.68 14.336 32 32 32h64c17.664 0 32-14.32 32-32v-64c0-17.648-14.336-32-32-32m0-255.984h-64c-17.664 0-32 14.336-32 32v64c0 17.664 14.336 32 32 32h64c17.664 0 32-14.336 32-32v-64c0-17.68-14.336-32-32-32m-256 0h-64c-17.664 0-32 14.336-32 32v64c0 17.664 14.336 32 32 32h64c17.664 0 32-14.336 32-32v-64c0-17.68-14.336-32-32-32m0 255.984h-64c-17.664 0-32 14.336-32 32v64c0 17.68 14.336 32 32 32h64c17.664 0 32-14.32 32-32v-64c0-17.648-14.336-32-32-32" />
-                  </svg>
+                  <CalenderSvg />
                   <p>2020</p>
                 </div>
                 <div className="text-center flex flex-col items-center">
@@ -68,49 +51,69 @@ export default function VehicleComparison() {
                   <Image src={cargo} width={13} height={13} alt="no image" />
                   <p>Cargo</p>
                 </div>
-                <div className="text-center flex flex-col items-center">
-                  <Image src={available} width={13} height={13} alt="no image" />
-                  <p>Available</p>
-                </div>
               </div>
-              <div className="text-left flex font-semibold items-center justify-normal py-3 text-lg"> <FaIndianRupeeSign />16.28 - 16.38 lakh</div>
 
               {/* Pricing and Action */}
-            </div>
-
-            <div className="my-4 mx-5 w-[12vw]">
-              <h2 className="text-xl font-semibold">Ashok Leyland</h2>
-              <p className="text-gray-500">Ashok Leyland AL192042</p>
-
-              {/* Info Icons Section */}
-              <div className="flex justify-between mt-5 py-2 text-sm border-t-2 border-b-2 text-gray-600">
-                <div className="text-center flex flex-col items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 1024 1024">
-                    <path fill="currentColor" d="m960 95.888l-256.224.001V32.113c0-17.68-14.32-32-32-32s-32 14.32-32 32v63.76h-256v-63.76c0-17.68-14.32-32-32-32s-32 14.32-32 32v63.76H64c-35.344 0-64 28.656-64 64v800c0 35.343 28.656 64 64 64h896c35.344 0 64-28.657 64-64v-800c0-35.329-28.656-63.985-64-63.985m0 863.985H64v-800h255.776v32.24c0 17.679 14.32 32 32 32s32-14.321 32-32v-32.224h256v32.24c0 17.68 14.32 32 32 32s32-14.32 32-32v-32.24H960zM736 511.888h64c17.664 0 32-14.336 32-32v-64c0-17.664-14.336-32-32-32h-64c-17.664 0-32 14.336-32 32v64c0 17.664 14.336 32 32 32m0 255.984h64c17.664 0 32-14.32 32-32v-64c0-17.664-14.336-32-32-32h-64c-17.664 0-32 14.336-32 32v64c0 17.696 14.336 32 32 32m-192-128h-64c-17.664 0-32 14.336-32 32v64c0 17.68 14.336 32 32 32h64c17.664 0 32-14.32 32-32v-64c0-17.648-14.336-32-32-32m0-255.984h-64c-17.664 0-32 14.336-32 32v64c0 17.664 14.336 32 32 32h64c17.664 0 32-14.336 32-32v-64c0-17.68-14.336-32-32-32m-256 0h-64c-17.664 0-32 14.336-32 32v64c0 17.664 14.336 32 32 32h64c17.664 0 32-14.336 32-32v-64c0-17.68-14.336-32-32-32m0 255.984h-64c-17.664 0-32 14.336-32 32v64c0 17.68 14.336 32 32 32h64c17.664 0 32-14.32 32-32v-64c0-17.648-14.336-32-32-32" />
-                  </svg>
-                  <p>2020</p>
-                </div>
-                <div className="text-center flex flex-col items-center">
-                  <Image src={ton} width={13} height={13} alt="no image" />
-                  <p>12 Ton</p>
-                </div>
-                <div className="text-center flex flex-col items-center">
-                  <Image src={cargo} width={13} height={13} alt="no image" />
-                  <p>Cargo</p>
-                </div>
-                <div className="text-center flex flex-col items-center">
-                  <Image src={available} width={13} height={13} alt="no image" />
-                  <p>Available</p>
+              <div className="flex justify-start flex-col items-start my-5">
+                <div>
+                  <p className="text-lg font-meduim font-bold">₹1,00,000</p>
                 </div>
               </div>
-              <div className="text-left flex font-semibold items-center justify-normal py-3 text-lg"> <FaIndianRupeeSign />16.28 - 16.38 lakh</div>
+
             </div>
+            <Link href="/vehicle-details" className="px-[1pc] flex items-center text-primarycolor text-lg font-semibold pb-5 ">
+              comapre vehicles <FaArrowRight />
+            </Link>
           </div>
-          <div className="text-primarycolor pl-5 pb-4">
-            <a className="">Compare vehicle <FaArrowRight className="inline-block"/></a>
+        </div>
+
+      </div>
+      <div className="col-span-1">
+
+        <div className={`bg-white`}>
+          {/* Truck Image Carousel */}
+          <div className="flex justify-end items-end h-[200px] bg-[#E6E6E7]">
+            <Image
+              className="h-[80%] object-contain"
+              width={200}
+              src={rightTruck}
+              alt="Truck"
+            />
+          </div>
+          {/* Location Tag */}
+
+          {/* Card Content */}
+          <div className="my-4 text-sm mx-5">
+            <h2 className="text-lg font-semibold">Ashok Leyland</h2>
+            <p className="text-gray-500 text-xs">Ashok Leyland 1920 4X2 Tipper | AL192042</p>
+
+            {/* Info Icons Section */}
+            <div className="flex justify-between mt-5 py-2 text-sm border-t-2 border-b-2 text-gray-600">
+              <div className="text-center flex flex-col items-center">
+                <CalenderSvg />
+                <p>2020</p>
+              </div>
+              <div className="text-center flex flex-col items-center">
+                <Image src={ton} width={13} height={13} alt="no image" />
+                <p>12 Ton</p>
+              </div>
+              <div className="text-center flex flex-col items-center">
+                <Image src={cargo} width={13} height={13} alt="no image" />
+                <p>Cargo</p>
+              </div>
+            </div>
+
+            {/* Pricing and Action */}
+            <div className="flex justify-start flex-col items-start my-5">
+              <div>
+                <p className="text-lg font-meduim font-bold">₹1,00,000</p>
+              </div>
+
+            </div>
+
           </div>
         </div>
       </div>
-    </div >
+    </div>
   );
 }
